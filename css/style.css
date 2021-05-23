@@ -94,9 +94,10 @@ body {
   font-size: 0.875rem;
   background: #f5f5f5;
   font-family: "Roboto", sans-serif;
+  color: #222222;
+  overflow-x: hidden;
 }
 
-header,
 nav {
   height: 100px;
   width: 100%;
@@ -104,7 +105,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: fixed;
 }
 
 #header-img {
@@ -137,6 +138,11 @@ ul li {
   margin-right: 15px;
 }
 
+ul li:hover {
+  font-weight: bold;
+  transform: translateY(-3px);
+}
+
 #last-link {
   margin-right: 0;
 }
@@ -149,8 +155,380 @@ ul li a {
 #home {
   height: 100vh;
   width: 100vw;
-  background: url("https://stepmixx.github.io/TT-Rackets-Landing-Page/img/ping-pong-the-animation-bg-mobile.png");
+  background: url("https://stepmixx.github.io/TT-Rackets-Landing-Page/img/ping-pong-the-animation-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 80%;
+  background-position-y: top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#home h2 {
+  width: 100%;
+  height: auto;
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: 1.625rem;
+  color: #222222;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+#try-btn {
+  width: 100px;
+  height: 40px;
+  background: #265372;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+#try-btn a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.125rem;
+}
+
+#try-btn:hover {
+  background: #e62327;
+  font-weight: 550;
+}
+
+#home-content {
+  width: 220px;
+  height: auto;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#about {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+#about p {
+  width: 85vw;
+  text-align: center;
+  margin-bottom: 25px;
+  max-width: 910px;
+}
+
+#about iframe {
+  width: 85vw;
+  height: 45vw;
+  max-width: 852px;
+  max-height: 480px;
+}
+
+#rackets {
+  padding-top: 70px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+#rackets h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+#pre-made-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background: #265372;
+  margin-bottom: 150px;
+}
+
+#custom-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background: #e62327;
+}
+
+.racket-container {
+  width: 90vw;
+  max-width: 400px;
+  height: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #222222;
+  border-radius: 10px;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.racket-container .stats-container {
+  font-size: 1rem;
+  width: 80%;
+  max-width: 260px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.racket-container .star-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.racket-container .price {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.racket-container h3 {
+  font-family: Ubuntu;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.order-btn,
+.buy-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #e62327;
+}
+
+.order-btn {
+  background: #265372;
+}
+
+.buy-btn:hover,
+.order-btn:hover {
+  width: 155px;
+  height: 52.5px;
+  font-weight: bold;
+  font-size: 1.625rem;
+}
+
+.buy-btn a:hover {
+  font-size: 2rem;
+}
+
+#footer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+  color: #f5f5f5;
+  display: grid;
+  grid-template-rows: 90% auto;
+}
+
+#contact {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  max-width: 500px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+form label {
+  font-size: 1.125rem;
+  margin-bottom: 7px;
+}
+
+form #email {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-size: 0.8rem;
+  line-height: inherit;
+  padding-left: 15px;
+}
+
+form textarea {
+  width: 100%;
+  height: 80px;
+  font-family: Roboto;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+#submit {
+  width: 150px;
+  height: 50px;
+  background: #e62327;
+  border-radius: 10px;
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  border: none;
+}
+
+#submit:hover {
+  font-weight: bold;
+  font-size: 1.625rem;
+  background: #265372;
+}
+
+#social-media {
+  display: flex;
+  width: 80vw;
+  max-width: 350px;
+  justify-content: space-between;
+}
+
+#social-media div a svg {
+  width: 40px;
+}
+
+#social-media div a svg:hover {
+  filter: invert(33%) sepia(100%) saturate(5994%) hue-rotate(340deg)
+    brightness(87%) contrast(100%);
+}
+
+footer p {
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+  nav {
+    height: 60px;
+    width: 95vw;
+    margin-top: 10px;
+    background: rgba(34, 34, 34, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo {
+    margin: 0;
+    margin-left: 30px;
+  }
+
+  ul {
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  #home-content {
+    position: relative;
+    top: 5%;
+    width: 300px;
+    margin-top: 30px;
+  }
+
+  #home h2 {
+    font-size: 2rem;
+  }
+
+  form label {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html,
+  body {
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 95vw;
+    margin-top: 15px;
+  }
+
+  #home-content {
+    margin-top: 100px;
+    top: 1vw;
+    width: 350px;
+  }
+
+  #try-btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  #contact {
+    flex-direction: row;
+  }
+
+  form {
+    margin-bottom: 0px;
+  }
+
+  #social-media {
+    position: relative;
+    width: auto;
+    height: 350px;
+    flex-direction: column;
+    left: 15vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #home-content {
+    width: 400px;
+    margin-top: 35vh;
+  }
+
+  #home h2 {
+    font-size: 2.5rem;
+  }
+
+  #social-media {
+    left: 20vw;
+  }
 }
